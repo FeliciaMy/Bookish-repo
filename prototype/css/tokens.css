@@ -1,0 +1,22 @@
+/* Bookish design tokens — mirrors design/05-visual-direction.md */
+:root {
+  --ink: #1a2f23;
+  --ink-soft: #2d4a3a;
+  --forest: #3d5c4a;
+  --moss: #5c7a68;
+  --paper: #f3efe6;
+  --paper-raised: #fffbf5;
+  --rule: #d4cbb8;
+  --muted: #6b6558;
+  --review: #8b5e3c;
+  --heart: #a63d40;
+  --success: #2f6b4f;
+  --phone-w: 390px;
+  --phone-h: 844px;
+  --nav-h: 64px;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-ui: "Source Sans 3", "Source Sans Pro", system-ui, sans-serif;
+  --shadow-soft: 0 8px 24px rgba(26, 47, 35, 0.08);
+}

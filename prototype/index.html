@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bookish — Design Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <header class="studio-header">
+      <h1 class="brand">Bookish</h1>
+      <p>Mobile design prototype — click through the phone</p>
+    </header>
+
+    <nav class="flow-links" aria-label="Jump to flows">
+      <a href="#welcome">Welcome</a>
+      <a href="#home">Home feed</a>
+      <a href="#explore">Browse / buy</a>
+      <a href="#sell-1">Sell flow</a>
+      <a href="#review-create">Write review</a>
+      <a href="#profile">Profile</a>
+    </nav>
+
+    <div class="phone" role="application" aria-label="Bookish mobile prototype">
+      <div class="phone-notch" aria-hidden="true"></div>
+      <div class="phone-status">
+        <span>9:41</span>
+        <span>●●● 5G ▮</span>
+      </div>
+
+      <div class="app">
+        <div class="screens">
+          <!-- WELCOME -->
+          <section class="screen active" data-screen="welcome">
+            <div class="screen-scroll" style="padding: 0">
+              <div class="welcome">
+                <div class="brand">Bookish</div>
+                <p>Pre-loved books find new shelves — and readers find each other.</p>
+                <a class="btn btn-primary btn-block" href="#signup">Get started</a>
+                <a class="btn btn-secondary btn-block" href="#signin">Sign in</a>
+              </div>
+            </div>
+          </section>
+
+          <!-- SIGN UP -->
+          <section class="screen" data-screen="signup">
+            <div class="topbar">
+              <a class="icon-btn back-btn" href="#welcome" aria-label="Back">‹</a>
+              <div class="title">Create account</div>
+            </div>
+            <div class="screen-scroll pad">
+              <div class="field">
+                <label>Email</label>
+                <input type="email" placeholder="you@email.com" value="thandi@email.com" />
+              </div>
+              <div class="field">
+                <label>Password</label>
+                <input type="password" value="••••••••" />
+              </div>
+              <div class="field">
+                <label>Display name</label>
+                <input type="text" placeholder="How you’ll appear" value="Thandi" />
+              </div>
+              <a class="btn btn-primary btn-block" href="#setup">Create account</a>
+              <p class="helper" style="text-align: center">
+                Have an account? <a href="#signin">Sign in</a>
+              </p>
+            </div>
+          </section>
+
+          <!-- SIGN IN -->
+          <section class="screen" data-screen="signin">
+            <div class="topbar">
+              <a class="icon-btn back-btn" href="#welcome" aria-label="Back">‹</a>
+              <div class="title">Sign in</div>
+            </div>
+            <div class="screen-scroll pad">
+              <div class="field">
+                <label>Email</label>
+                <input type="email" placeholder="you@email.com" />
+              </div>
+              <div class="field">
+                <label>Password</label>
+                <input type="password" placeholder="••••••••" />
+              </div>
+              <a class="btn btn-primary btn-block" href="#home">Sign in</a>
+              <p class="helper" style="text-align: center">
+                New here? <a href="#signup">Create account</a>
+              </p>
+            </div>
+          </section>
+
+          <!-- PROFILE SETUP -->
+          <section class="screen" data-screen="setup">
+            <div class="topbar">
+              <div class="title">Almost there</div>
+            </div>
+            <div class="screen-scroll pad">
+              <div style="display: flex; justify-content: center; margin: 12px 0 24px">
+                <div class="avatar lg">T</div>
+              </div>
+              <div class="field">
+                <label>Display name</label>
+                <input type="text" value="Thandi" />
+              </div>
+              <div class="field">
+                <label>City / area</label>
+                <input type="text" placeholder="e.g. Johannesburg, Parktown" value="Johannesburg" />
+              </div>
+              <a class="btn btn-primary btn-block" href="#home">Continue</a>
+            </div>
+          </section>
+
+          <!-- HOME -->
+          <section class="screen" data-screen="home">
+            <div class="topbar">
+              <div class="brand-mark brand">Bookish</div>
+              <button class="icon-btn" type="button" aria-label="Notifications">◌</button>
+            </div>
+            <div class="screen-scroll has-nav has-fab">
+              <div class="feed">
+                <a class="feed-card" href="#sale">
+                  <img
+                    src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300&q=80"
+                    alt="Book cover"
+                  />
+                  <div class="feed-card-body">
+                    <span class="chip chip-sale">For sale</span>
+                    <h3>The Midnight Library</h3>
+                    <p class="meta">R89 · Good · Johannesburg</p>
+                    <p class="blurb" style="font-size: 0.88rem">
+                      Soft cover, light shelf wear. Meetup or courier.
+                    </p>
+                  </div>
+                </a>
+                <a class="feed-card" href="#review">
+                  <img
+                    src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=300&q=80"
+                    alt="Book"
+                  />
+                  <div class="feed-card-body">
+                    <span class="chip chip-review">Review</span>
+                    <h3>Klara and the Sun</h3>
+                    <div class="stars">★★★★☆</div>
+                    <p class="blurb" style="font-size: 0.88rem">
+                      Quiet and devastating. Ishiguro at his most tender.
+                    </p>
+                    <div class="feed-actions"><span>♥ 24</span><span>💬 6</span></div>
+                  </div>
+                </a>
+                <a class="feed-card" href="#sale">
+                  <img
+                    src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=300&q=80"
+                    alt="Books"
+                  />
+                  <div class="feed-card-body">
+                    <span class="chip chip-sale">For sale</span>
+                    <h3>Educated</h3>
+                    <p class="meta">R120 · Like new · Pretoria</p>
+                    <p class="blurb" style="font-size: 0.88rem">Hardback. Cash or EFT on meetup.</p>
+                  </div>
+                </a>
+                <a class="feed-card" href="#review">
+                  <img
+                    src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&q=80"
+                    alt="Library"
+                  />
+                  <div class="feed-card-body">
+                    <span class="chip chip-review">Review</span>
+                    <h3>Atomic Habits</h3>
+                    <div class="stars">★★★★★</div>
+                    <p class="blurb" style="font-size: 0.88rem">
+                      Practical without being preachy. Dog-eared my copy.
+                    </p>
+                    <div class="feed-actions"><span>♥ 51</span><span>💬 12</span></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- EXPLORE -->
+          <section class="screen" data-screen="explore">
+            <div class="topbar">
+              <div class="title">Explore</div>
+            </div>
+            <div class="screen-scroll has-nav has-fab">
+              <div class="search-wrap">
+                <input type="search" placeholder="Search books for sale…" />
+              </div>
+              <div class="filter-row">
+                <button type="button" class="filter-chip active">Nearby</button>
+                <button type="button" class="filter-chip">Condition</button>
+                <button type="button" class="filter-chip">Under R100</button>
+                <button type="button" class="filter-chip">Courier OK</button>
+              </div>
+              <div class="grid">
+                <a class="grid-tile" href="#sale" style="animation-delay: 0.05s">
+                  <img
+                    src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&q=80"
+                    alt=""
+                  />
+                  <h3>The Midnight Library</h3>
+                  <div class="price">R89 · Good</div>
+                </a>
+                <a class="grid-tile" href="#sale" style="animation-delay: 0.1s">
+                  <img
+                    src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=400&q=80"
+                    alt=""
+                  />
+                  <h3>Educated</h3>
+                  <div class="price">R120 · Like new</div>
+                </a>
+                <a class="grid-tile" href="#sale" style="animation-delay: 0.15s">
+                  <img
+                    src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&q=80"
+                    alt=""
+                  />
+                  <h3>Normal People</h3>
+                  <div class="price">R65 · Acceptable</div>
+                </a>
+                <a class="grid-tile" href="#sale" style="animation-delay: 0.2s">
+                  <img
+                    src="https://images.unsplash.com/photo-1524578271613-d550eacf6090?w=400&q=80"
+                    alt=""
+                  />
+                  <h3>Project Hail Mary</h3>
+                  <div class="price">R95 · Good</div>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- SALE DETAIL -->
+          <section class="screen" data-screen="sale">
+            <div class="topbar">
+              <a class="icon-btn back-btn" href="#explore" aria-label="Back">‹</a>
+              <div class="title">For sale</div>
+            </div>
+            <div class="screen-scroll has-sticky-cta">
+              <img
+                class="hero-media"
+                src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=900&q=80"
+                alt="The Midnight Library"
+              />
+              <div class="detail-body">
+                <span class="chip chip-sale">For sale</span>
+                <h1>The Midnight Library</h1>
+                <div class="detail-meta-row">
+                  <span class="price-lg">R89</span>
+                  <span class="meta">Good condition</span>
+                </div>
+                <p class="blurb">
+                  Soft cover, one crease on the spine, pages clean. Finished it last month —
+                  happy for it to find a new reader.
+                </p>
+                <dl class="logistics">
+                  <div>
+                    <dt>Location</dt>
+                    <dd>Johannesburg · Parktown / Braamfontein</dd>
+                  </div>
+                  <div>
+                    <dt>Delivery</dt>
+                    <dd>Meetup preferred · Courier possible (buyer pays)</dd>
+                  </div>
+                  <div>
+                    <dt>Payment</dt>
+                    <dd>EFT or cash on meetup</dd>
+                  </div>
+                </dl>
+                <div class="seller-row">
+                  <div class="avatar">T</div>
+                  <div>
+                    <strong>Thandi</strong>
+                    <div class="meta">Seller · Joined 2025</div>
+                  </div>
+                </div>
+                <a href="#sale-comments" style="font-weight: 600; color: var(--ink-soft)"
+                  >Comments (3) →</a
+                >
+              </div>
+            </div>
+            <div class="sticky-cta">
+              <a class="btn btn-ghost" href="#sale-comments">Comment</a>
+              <a class="btn btn-primary" href="#contact">Buy</a>
+            </div>
+          </section>
+
+          <!-- SALE COMMENTS -->
+          <section class="screen" data-screen="sale-comments">
+            <div class="topbar">
+              <a class="icon-btn back-btn" href="#sale" aria-label="Back">‹</a>
+              <div class="title">Comments</div>
+            </div>
+            <div class="screen-scroll pad" style="padding-bottom: 0; display: flex; flex-direction: column">
+              <div style="flex: 1">
+                <div class="comment">
+                  <div class="avatar">L</div>
+                  <div>
+                    <strong>Lebo</strong>
+                    <p>Still available? Can you do meetup near Rosebank?</p>
+                    <span class="meta">2h ago</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <div class="avatar">T</div>
+                  <div>
+                    <strong>Thandi</strong>
+                    <p>Yes! Rosebank works Saturday morning.</p>
+                    <span class="meta">1h ago</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <div class="avatar">S</div>
+                  <div>
+                    <strong>Sam</strong>
+                    <p>Loved this one — you’re in for a treat.</p>
+                    <span class="meta">45m ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="composer">
+              <input type="text" placeholder="Ask about the book…" />
+              <button class="btn btn-primary btn-sm" type="button">Send</button>
+            </div>
+          </section>
+
+          <!-- CONTACT / BUY -->
+          <section class="screen" data-screen="contact">
+            <div class="topbar">
+              <a class="icon-btn back-btn" href="#sale" aria-label="Back">‹</a>
+              <div class="title">Arrange purchase</div>
+            </div>
+            <div class="screen-scroll pad">
+              <p class="blurb" style="margin-bottom: 16px">
+                Bookish doesn’t process payments yet. Use the seller’s preferences below to
+                arrange handoff.
+              </p>
+              <div class="preview-card">
+                <div class="body">
+                  <span class="chip chip-sale">For sale</span>
+                  <h3 class="brand" style="font-size: 1.2rem; margin: 8px 0">
+                    The Midnight Library · R89
+                  </h3>
+                  <dl class="logistics" style="border: none; margin: 0; padding: 8px 0 0">
+                    <div>
+                      <dt>Delivery</dt>
+                      <dd>Meetup preferred · Courier possible</dd>
+                    </div>
+                    <div>
+                      <dt>Payment</dt>
+                      <dd>EFT or cash on meetup</dd>
+                    </div>
+                    <div>
+                      <dt>Seller</dt>
+                      <dd>Thandi · Johannesburg</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+              <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 10px">
+                <button class="btn btn-primary btn-block" type="button">Message seller</button>
+                <button class="btn btn-secondary btn-block" type="button">Copy listing details</button>
+              </div>
+              <p class="helper">In the build phase, messaging may open chat or WhatsApp.</p>
+            </div>
+          </section>
+
+          <!-- SELL STEP 1 -->
+          <section class="screen" data-screen="sell-1">
+            <div class="topbar">
+              <a class="icon-btn back-btn" href="#home" aria-label="Back">‹</a>
+              <div class="title">Sell a book</div>
+            </div>
+            <p class="step-label">Step 1 of 5 · Photos</p>
+            <div class="progress"><span style="width: 20%"></span></div>
+            <div class="screen-scroll has-nav pad">
+              <div class="photo-add">
+                <span style="font-size: 1.5rem">＋</span>
+                <span>Add cover &amp; condition photos</span>
+              </div>
+              <p class="helper">Tip: Include spine and any wear so buyers trust the listing.</p>
+              <a class="btn btn-primary btn-block" href="#sell-2" style="margin-top: 20px"
+                >Continue</a
+              >
+            </div>
+          </section>
+
+          <!-- SELL STEP 2 -->
+          <section class="screen" data-screen="sell-2">
+            <div class="topbar">
+              <a class="icon-btn back-btn" href="#sell-1" aria-label="Back">‹</a>
+              <div class="title">Sell a book</div>
+            </div>
+            <p class="step-label">Step 2 of 5 · Book info</p>
+            <div class="progress"><span style="width: 40%"></span></div>
+            <div class="screen-scroll pad">
+              <div class="field">
+                <label>Book title</label>
+                <input type="text" value="The Midnight Library" />
+              </div>
+              <div class="field">
+                <label>Author (optional)</label>
+                <input type="text" value="Matt Haig" />
+              </div>
+              <div class="field">
+                <label>Note for buyers</label>
+                <textarea>
+Soft cover, light shelf wear. Finished last month — happy for it to find a new reader.</textarea
+                >
+              </div>
+              <div style="display: flex; gap: 10px; margin-top: 8px">
+                <a class="btn btn-ghost" href="#sell-1" style="flex: 1">Back</a>
+                <a class="btn btn-primary" href="#sell-3" style="flex: 1">Continue</a>
+              </div>
+            </div>
+          </section>
+
+          <!-- SELL STEP 3 -->
+          <section class="screen" data-screen="sell-3">
+            <div class="topbar">
+              <a class="icon-btn back-btn" href="#sell-2" aria-label="Back">‹</a>
+              <div class="title">Sell a book</div>
+            </div>
+            <p class="step-label">Step 3 of 5 · Condition, price, location</p>
+            <div class="progress"><span style="width: 60%"></span></div>
+            <div class="screen-scroll pad">
+              <label class="meta" style="font-weight: 700; display: block; margin-bottom: 8px"
+                >Condition</label
+              >
+              <div class="choice-grid" style="margin-bottom: 16px">
+                <div class="choice">Like new</div>
+                <div class="choice selected">Good</div>
+                <div class="choice">Acceptable</div>
+                <div class="choice">Well loved</div>
+              </div>
+              <div class="field">
+                <label>Price (ZAR)</label>
+                <input type="text" value="89" />
+              </div>
+              <div class="field">
+                <label>Location</label>
+                <input type="text" value="Johannesburg · Parktown" />
+              </div>
+              <div style="display: flex; gap: 10px; margin-top: 8px">
+                <a class="btn btn-ghost" href="#sell-2" style="flex: 1">Back</a>
+                <a class="btn btn-primary" href="#sell-4" style="flex: 1">Continue</a>
+              </div>
+            </div>
+          </section>
+
+          <!-- SELL STEP 4 -->
+          <section class="screen" data-screen="sell-4">
+            <div class="topbar">
+              <a class="icon-btn back-btn" href="#sell-3" aria-label="Back">‹</a>
+              <div class="title">Sell a book</div>
+            </div>
+            <p class="step-label">Step 4 of 5 · Delivery &amp; payment</p>
+            <div class="progress"><span style="width: 80%"></span></div>
+            <div class="screen-scroll pad">
+              <label class="meta" style="font-weight: 700; display: block; margin-bottom: 8px"
+                >How buyers can receive it</label
+              >
+              <div class="choice-grid" style="margin-bottom: 16px">
+                <div class="choice">Meetup</div>
+                <div class="choice">Courier</div>
+                <div class="choice selected" style="grid-column: 1 / -1">Either</div>
+              </div>
+              <label class="meta" style="font-weight: 700; display: block; margin-bottom: 8px"
+                >Payment preferences</label
+              >
+              <div class="choice-grid" data-multi style="margin-bottom: 16px">
+                <div class="choice selected">EFT</div>
+                <div class="choice selected">Cash</div>
+              </div>
+              <div class="field">
+                <label>Extra notes (optional)</label>
+                <textarea placeholder="e.g. Buyer covers courier; evenings only for meetup">
+Buyer covers courier. Weekday evenings for meetup.</textarea
+                >
+              </div>
+              <div style="display: flex; gap: 10px; margin-top: 8px">
+                <a class="btn btn-ghost" href="#sell-3" style="flex: 1">Back</a>
+                <a class="btn btn-primary" href="#sell-preview" style="flex: 1">Continue</a>
+              </div>
+            </div>
+          </section>
+
+          <!-- SELL PREVIEW -->
+          <section class="screen" data-screen="sell-preview">
+            <div class="topbar">
+              <a class="icon-btn back-btn" href="#sell-4" aria-label="Back">‹</a>
+              <div class="title">Preview</div>
+            </div>
+            <p class="step-label">Step 5 of 5 · Review &amp; publish</p>
+            <div class="progress"><span style="width: 100%"></span></div>
+            <div class="screen-scroll pad">
+              <div class="preview-card">
+                <img
+                  src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=700&q=80"
+                  alt=""
+                />
+                <div class="body">
+                  <span class="chip chip-sale">For sale</span>
+                  <h3 class="brand" style="font-size: 1.25rem; margin: 8px 0 4px">
+                    The Midnight Library
+                  </h3>
+                  <p class="meta">R89 · Good · Johannesburg</p>
+                  <p class="blurb" style="font-size: 0.9rem">
+                    Soft cover, light shelf wear. Meetup or courier · EFT or cash
+                  </p>
+                </div>
+              </div>
+              <button
+                class="btn btn-primary btn-block"
+                type="button"
+                data-publish-sale
+                style="margin-top: 24px"
+              >
+                Publish listing
+              </button>
+              <a class="btn btn-ghost btn-block" href="#sell-4" style="margin-top: 8px">Edit</a>
+            </div>
+          </section>
+
+          <!-- CREATE REVIEW -->
+          <section class="screen" data-screen="review-create">
+            <div class="topbar">
+              <a class="icon-btn back-btn" href="#home" aria-label="Back">‹</a>
+              <div class="title">Write a review</div>
+            </div>
+            <div class="screen-scroll pad">
+              <div class="photo-add">
+                <span style="font-size: 1.5rem">＋</span>
+                <span>Add photos of the book</span>
+              </div>
+              <label class="meta" style="font-weight: 700">Your rating</label>
+              <div class="star-input" aria-label="Star rating">
+                <span class="on">★</span><span class="on">★</span><span class="on">★</span
+                ><span class="on">★</span><span>★</span>
+              </div>
+              <div class="field">
+                <label>Book title</label>
+                <input type="text" placeholder="What did you read?" value="Klara and the Sun" />
+              </div>
+              <div class="field">
+                <label>Your thoughts</label>
+                <textarea>
+Quiet and devastating. Ishiguro at his most tender — I kept thinking about Klara long after the last page.</textarea
+                >
+              </div>
+              <button class="btn btn-primary btn-block" type="button" data-publish-review>
+                Publish review
+              </button>
+            </div>
+          </section>
+
+          <!-- REVIEW DETAIL -->
+          <section class="screen" data-screen="review">
+            <div class="topbar">
+              <a class="icon-btn back-btn" href="#home" aria-label="Back">‹</a>
+              <div class="title">Review</div>
+            </div>
+            <div class="screen-scroll">
+              <img
+                class="hero-media tall"
+                src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=900&q=80"
+                alt="Klara and the Sun"
+              />
+              <div class="detail-body">
+                <span class="chip chip-review">Review</span>
+                <h1>Klara and the Sun</h1>
+                <div class="stars" style="font-size: 1.1rem; margin-bottom: 8px">★★★★☆</div>
+                <div class="seller-row">
+                  <div class="avatar">S</div>
+                  <div>
+                    <strong>Sam</strong>
+                    <div class="meta">2 days ago</div>
+                  </div>
+                </div>
+                <p class="blurb">
+                  Quiet and devastating. Ishiguro at his most tender — I kept thinking about
+                  Klara long after the last page. If you like slow, thoughtful speculative
+                  fiction, this belongs on your shelf.
+                </p>
+                <div style="display: flex; gap: 20px; margin: 16px 0">
+                  <button type="button" class="like-btn">
+                    <span class="heart-icon">♥</span>
+                    <span class="like-count">24</span> Like
+                  </button>
+                  <span class="meta" style="align-self: center">💬 6 comments</span>
+                </div>
+                <h3 class="brand" style="font-size: 1.1rem; margin: 8px 0">Comments</h3>
+                <div class="comment">
+                  <div class="avatar">L</div>
+                  <div>
+                    <strong>Lebo</strong>
+                    <p>Adding this to my list tonight.</p>
+                    <span class="meta">1d ago</span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <div class="avatar">T</div>
+                  <div>
+                    <strong>Thandi</strong>
+                    <p>The ending wrecked me in the best way.</p>
+                    <span class="meta">18h ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="composer">
+              <input type="text" placeholder="Share a thought…" />
+              <button class="btn btn-primary btn-sm" type="button">Post</button>
+            </div>
+          </section>
+
+          <!-- PROFILE -->
+          <section class="screen" data-screen="profile">
+            <div class="topbar">
+              <div class="title">Profile</div>
+              <a class="icon-btn" href="#settings" aria-label="Settings">⚙</a>
+            </div>
+            <div class="screen-scroll has-nav">
+              <div class="profile-head">
+                <div class="avatar lg">T</div>
+                <h2 class="brand" style="font-size: 1.4rem">Thandi</h2>
+                <p class="meta">Johannesburg</p>
+              </div>
+              <div class="tabs profile-tabs">
+                <button type="button" class="active" data-panel="listings">Listings</button>
+                <button type="button" data-panel="reviews">Reviews</button>
+                <button type="button" data-panel="saved">Saved</button>
+              </div>
+              <div class="profile-panel feed" data-panel="listings" style="padding-top: 8px">
+                <a class="feed-card" href="#sale">
+                  <img
+                    src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300&q=80"
+                    alt=""
+                  />
+                  <div class="feed-card-body">
+                    <span class="chip chip-sale">For sale</span>
+                    <h3>The Midnight Library</h3>
+                    <p class="meta">R89 · Good · Active</p>
+                  </div>
+                </a>
+              </div>
+              <div class="profile-panel feed" data-panel="reviews" hidden style="padding-top: 8px">
+                <a class="feed-card" href="#review">
+                  <img
+                    src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&q=80"
+                    alt=""
+                  />
+                  <div class="feed-card-body">
+                    <span class="chip chip-review">Review</span>
+                    <h3>Atomic Habits</h3>
+                    <div class="stars">★★★★★</div>
+                  </div>
+                </a>
+              </div>
+              <div class="profile-panel pad" data-panel="saved" hidden>
+                <p class="helper" style="padding-top: 16px">
+                  Saved listings and liked reviews will appear here.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- SETTINGS -->
+          <section class="screen" data-screen="settings">
+            <div class="topbar">
+              <a class="icon-btn back-btn" href="#profile" aria-label="Back">‹</a>
+              <div class="title">Settings</div>
+            </div>
+            <div class="screen-scroll pad">
+              <a class="link-row" href="#setup"><span>Edit profile</span><span>›</span></a>
+              <a class="link-row" href="#welcome"><span>Notifications</span><span>›</span></a>
+              <a class="link-row" href="#welcome"><span>Privacy</span><span>›</span></a>
+              <a class="link-row" href="#welcome"><span>Sign out</span><span>›</span></a>
+              <p class="helper">Settings are stubs for the design prototype.</p>
+            </div>
+          </section>
+        </div>
+
+        <a class="fab" id="fab" href="#review-create" aria-label="Write a review" title="Write a review"
+          >✎</a
+        >
+
+        <nav class="bottom-nav" id="bottom-nav" aria-label="Main">
+          <a class="nav-item active" data-tab="home" href="#home">
+            <svg viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20H4z" /></svg>
+            <span>Home</span>
+          </a>
+          <a class="nav-item" data-tab="explore" href="#explore">
+            <svg viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="6" />
+              <path d="m16 16 4 4" />
+            </svg>
+            <span>Explore</span>
+          </a>
+          <a class="nav-item" data-tab="sell" href="#sell-1">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 5v14M5 12h14" />
+            </svg>
+            <span>Sell</span>
+          </a>
+          <a class="nav-item" data-tab="profile" href="#profile">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="9" r="3.5" />
+              <path d="M5 19c1.5-3 4-4.5 7-4.5S17.5 16 19 19" />
+            </svg>
+            <span>Profile</span>
+          </a>
+        </nav>
+
+        <div class="toast" id="toast" role="status"></div>
+      </div>
+    </div>
+
+    <p class="meta" style="text-align: center; max-width: 390px">
+      Design phase only · See <code>design/</code> docs ·
+      <a href="../design/06-screen-inventory.md">Approval checklist</a>
+    </p>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
